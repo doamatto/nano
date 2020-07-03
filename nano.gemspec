@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |spec|
   spec.name = "nano-theme"
-  spec.version = "0.3.4"
+  spec.version = "0.4.0"
   spec.authors = ["doamatto"]
   spec.email = ["hello@doamatto.xyz"]
   spec.summary = "Nano is a super lightweight Jekyll theme built to work great on all platforms, respect user privacy, and load at lightning-fast speeds."
