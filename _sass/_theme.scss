@@ -285,7 +285,7 @@ table {
 }
 
 // Footnotes
-.footnote { text-decoration: none; }
+.footnote { text-decoration: none !important; }
 
 // Definition lists
 dt { font-weight: $font-bold; }
