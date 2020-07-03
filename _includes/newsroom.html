@@ -1,60 +1,62 @@
-<h3><a href="{{ '/atom.xml' | relative_url }}">Subscribe to the Atom feed.</a></h3>
-{% if site.disablecategories == false %}
-<h2 id="categories">Categories</h2>
-{% endif %}
-<ul>
+<div class="newsroom">
+  <h3><a href="{{ '/atom.xml' | relative_url }}">Subscribe to the Atom feed.</a></h3>
+  {% if site.disablecategories == false %}
+  <h2 id="categories">Categories</h2>
+  {% endif %}
+  <ul>
   {% if site.disablecategories == true %}
     {% for post in site.posts %}
-      <li>
-        {% if site.classicnews == true %}
-          <p>
-            <a href="{{ post.url }}">
-              <b>{{ post.title }} ({{ post.dateS }}). </b>
-            </a>
-            {{ post.excerpt | strip_html }}
-          </p>
-        {% else %}
-          <a href="{{ post.url }}">
-            <b>{{ post.title }} ({{ post.dateS }}). </b>
-          </a>
-          {{ post.excerpt }}
-        {% endif %}
-      </li>
+    <li>
+      {% if site.classicnews == true %}
+      <p>
+        <a href="{{ post.url }}">
+        <b>{{ post.title }} ({{ post.dateS }}). </b>
+        </a>
+        {{ post.excerpt | strip_html }}
+      </p>
+      {% else %}
+      <a href="{{ post.url }}">
+        <b>{{ post.title }} ({{ post.dateS }}). </b>
+      </a>
+      {{ post.excerpt }}
+      {% endif %}
+    </li>
     {% endfor %}
   {% else %}
     {% for category in site.categories %}
-      {% capture category_name %}{{category | first}}{% endcapture %}
-      <li>
-        <p>
-          <a href="#{{category_name | slugize}}">{{category_name}}</a>
-        </p>
-      </li>
+    {% capture category_name %}{{category | first}}{% endcapture %}
+    <li>
+      <p>
+      <a href="#{{category_name | slugize}}">{{category_name}}</a>
+      </p>
+    </li>
     {% endfor %}
   {% endif %}
-</ul>
-
-{% if site.disablecategories == false %}
+  </ul>
+  
+  {% if site.disablecategories == false %}
   {% for category in site.categories %}
   <p id="{{category_name | slugize}}" class="category_name">{{category_name}}</p>
   <ul>
     {% capture category_name %}{{ category | first }}{% endcapture %}
     {% for post in site.categories[category_name] %}
-      <li>
-        {% if site.classicnews == true %}
-            <p>
-              <a href="{{ post.url }}">
-              <b>{{ post.title }} ({{ post.dateS }}). </b>
-              </a>
-              {{ post.excerpt | strip_html }}
-            </p>
-        {% else %}
-            <a href="{{ post.url }}">
-              <b>{{ post.title }} ({{ post.dateS }}). </b>
-            </a>
-            {{ post.excerpt }}
-        {% endif %}
-      </li>
+    <li>
+      {% if site.classicnews == true %}
+        <p>
+        <a href="{{ post.url }}">
+        <b>{{ post.title }} ({{ post.dateS }}). </b>
+        </a>
+        {{ post.excerpt | strip_html }}
+        </p>
+      {% else %}
+        <a href="{{ post.url }}">
+        <b>{{ post.title }} ({{ post.dateS }}). </b>
+        </a>
+        {{ post.excerpt }}
+      {% endif %}
+    </li>
     {% endfor %}
   </ul>
   {% endfor %}
-{% endif %}
+  {% endif %}
+</div>
