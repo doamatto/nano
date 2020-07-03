@@ -178,6 +178,10 @@ footer {
 .container {
   width: 75vw;
   margin: 1em auto;
+  img {
+    @media(max-width: 480px) { width: 300px; }
+    width: 75vw;
+  }
   ul, ol {
     margin-left: 2em;
     margin-right: 24px !important;
