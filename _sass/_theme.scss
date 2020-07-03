@@ -41,6 +41,11 @@ h2 {
 }
 h3 { font-size: 16px; }
 ol, ul { margin: 1em 1em; }
+.category_name { 
+  font-size: 22px;
+  line-height: 1.1;
+  margin: .25em 0;
+}
 
 a { color: $LIGHTlinkColour; }
 a:hover {

@@ -1,5 +1,6 @@
 <h3><a href="{{ '/atom.xml' | relative_url }}">Subscribe to the Atom feed.</a></h3>
 
+<h2 id="categories">Categories</h2>
 <ul>
   {% if site.disablecategories == true %}
     {% for post in site.posts %}
@@ -33,7 +34,7 @@
 
 {% if site.disablecategories == false %}
   {% for category in site.categories %}
-  <h2 id="{{category_name | slugize}}">{{category_name}}</h2>
+  <p id="{{category_name | slugize}}" class="category_name">{{category_name}}</p>
   <ul>
     {% capture category_name %}{{ category | first }}{% endcapture %}
     {% for post in site.categories[category_name] %}
