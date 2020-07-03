@@ -9,7 +9,7 @@ logo: "/assets/logo.svg"
 favicon: "/assets/logo.svg"
 url: "https://doamatto.xyz/nano"
 
-disablecategories: false # Disable categories in newsroom
+disablecategories: true # Disable categories in newsroom
 classicnews: false # Bring back the pre-v0.3 newsroom look
 unsafecontent: false # DO NOT CHANGE WITHOUT READING THIS: https://github.com/doamatto/nano/wiki/Content-Security-Policy
 
