@@ -191,7 +191,8 @@ footer {
   margin: 1em auto;
   img {
     @media(max-width: 480px) { width: 300px; }
-    width: 75vw;
+    @media(max-width: 992px) { width: 80vw; }
+    width: 50vw;
   }
   ul, ol {
     margin-left: 2em;
@@ -286,6 +287,10 @@ table {
 
 // Footnotes
 .footnote { text-decoration: none !important; }
+.footnotes {
+  border-top: 1px solid #000;
+  @media(prefers-color-scheme: dark) { border-top: 1px solid #fff; }
+}
 
 // Definition lists
 dt { font-weight: $font-bold; }
