@@ -10,9 +10,15 @@ layout: default
     <h3>{{ page.dateS }} - Written by {{ page.author }}</h3>
     {{ content }}
     <br>
-    <h3>
-      Tags: {{page.categories}}. <a href="{{ '/atom.xml' | relative_url }}">Subscribe to the Atom feed.</a>
-    </h3>
+    {% if site.disablecategories == false %}
+      <h3>
+        Tags: {{page.categories}}. <a href="{{ '/atom.xml' | relative_url }}">Subscribe to the Atom feed.</a>
+      </h3>
+    {% else %}
+      <h3>
+        <a href="{{ '/atom.xml' | relative_url }}">Subscribe to the Atom feed.</a>
+      </h3>
+    {% endif %}
   </div>
 </div>
 
