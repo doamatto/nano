@@ -19,7 +19,7 @@ body {
 }
 
 // Typography
-@media only screen and (max-device-width: 480px) {
+@media only screen and (max-width: 480px) {
   h1 { font-size: 28px !important; }
   h2 { font-size: 21px !important; }
   h3 { font-size: 19px !important; }
@@ -197,7 +197,7 @@ footer {
     margin-left: 1em !important;
     margin-right: 24px !important;
   }
-  @media only screen and (max-device-width: 480px) {
+  @media only screen and (max-width: 480px) {
     max-width: 100% !important;
     margin: 1em 1em 1em 1em;
     width: auto !important;
