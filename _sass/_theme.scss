@@ -19,7 +19,7 @@ body {
 }
 
 // Typography
-@media only screen and (max-width: 480px) {
+@media (max-width: 480px) {
   h1 { font-size: 28px !important; }
   h2 { font-size: 21px !important; }
   h3 { font-size: 19px !important; }
@@ -209,7 +209,7 @@ footer {
     margin-left: 1em;
     margin-right: 24px;
   }
-  @media only screen and (max-width: 480px) {
+  @media (max-width: 480px) {
     max-width: calc(100vw - 1em);
     margin: 1em 1em 1em 1em;
     width: auto;
