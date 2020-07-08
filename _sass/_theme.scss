@@ -47,6 +47,7 @@ ol, ul { margin: 1em 1em; }
   margin: .25em 0;
   margin-left: 0 !important;
 }
+.
 
 a { color: $LIGHTlinkColour; }
 a:hover {
@@ -289,6 +290,7 @@ table {
 .footnote { text-decoration: none !important; }
 .footnotes {
   border-top: 1px solid #000;
+  font-size: 12px;
   @media(prefers-color-scheme: dark) { border-top: 1px solid #fff; }
 }
 
