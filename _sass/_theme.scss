@@ -19,7 +19,7 @@ body {
 }
 
 // Typography
-@media (max-width: 480px) {
+@media (max-width: 500px) {
   h1 { font-size: 28px !important; }
   h2 { font-size: 21px !important; }
   h3 { font-size: 19px !important; }
@@ -185,13 +185,11 @@ footer {
 // Main Content
 .container {
   width: 50vw;
-  @media(max-width: 992px) {
-    width: 90vw;
-  }
+  @media(max-width: 1000px) { width: 90vw; }
   margin: 1em auto;
   img {
-    @media(max-width: 480px) { width: 300px; }
-    @media(max-width: 992px) { width: 80vw; }
+    @media(max-width: 500px) { width: 300px; }
+    @media(max-width: 1000px) { width: 80vw; }
     width: 50vw;
   }
   ul, ol {
@@ -209,7 +207,7 @@ footer {
     margin-left: 1em;
     margin-right: 24px;
   }
-  @media (max-width: 480px) {
+  @media (max-width: 500px) {
     max-width: calc(100vw - 1em);
     margin: 1em 1em 1em 1em;
     width: auto;
@@ -266,7 +264,7 @@ table {
   padding: .5em .5em;
   margin: 0 auto;
   width: 100%;
-  @media(max-width: 480px) { width: 300px; }
+  @media(max-width: 500px) { width: 300px; }
   thead {
     background: #353230;
     color: #fff;
@@ -275,7 +273,7 @@ table {
       color: #000;
     }
   }
-  th { @media(min-width: 481px) { padding: .25em 2em; } }
+  th { @media(min-width: 500px) { padding: .25em 2em; } }
   th, td { padding: .5em .5em; }
   tbody {
     td {
