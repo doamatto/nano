@@ -36,7 +36,6 @@
       <p id="{{ category[0] | slugify }}" class="category_name">{{category[0]}}</p>
       <ul>
         {% for post in category[1] %}
-          <h1>{{ post.content | remove_first:post.excerpt | remove_first:post.excerpt_separator }}</h1>
           <li>
             {% if site.classicnews == true %}
               <p>
