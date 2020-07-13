@@ -125,7 +125,8 @@ nav {
       }
       a:hover {
         text-decoration: underline;
-        transition: text-decoration 150ms ease-in-out;
+        color: inherit;
+        transition: all 150ms ease-in-out;
       }
       :last-child { a { padding-right: 0; } }
     }
