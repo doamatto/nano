@@ -85,7 +85,6 @@ sass:
   sass_dir: _sass
 
 permalink: pretty
-
 collections:
   posts:
     path: _posts/
