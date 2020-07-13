@@ -300,9 +300,13 @@ table {
 }
 
 // Footnotes
-.footnote { text-decoration: none !important; }
+.footnote {
+  text-decoration: none !important;
+  margin: .10em .10em !important;
+}
 .footnotes {
   border-top: 1px solid #000;
+  font-size: 14px;
   @media(prefers-color-scheme: dark) { border-top: 1px solid #fff; }
 }
 
