@@ -198,12 +198,25 @@ footer {
   ul, ol {
     margin-left: 2em;
     margin-right: 24px !important;
+    ul, ol {
+      margin-top: .25em;
+      margin-bottom: .25em;
+    }
+    li {
+      padding-top: .25em;
+      padding-bottom: .25em;
+      a { text-decoration: underline; }
+      p, a {
+        margin: 0;
+        padding: 0;
+      }
+    }
   }
   @media(prefers-color-scheme: dark) {
     a { color: $DARKlinkColour; }
     a:hover, ul a:hover, ol a:hover, p a:hover {
       color: $DARKlinkHoverColour;
-      transition: color 250ms ease-in-out;
+      transition: all 250ms ease-in-out;
     }
   }
   .highlight, p, hr {
