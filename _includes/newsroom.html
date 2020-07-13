@@ -1,62 +1,69 @@
 <div class="newsroom">
   <h3><a href="{{ '/atom.xml' | relative_url }}">Subscribe to the Atom feed.</a></h3>
-  {% if site.disablecategories == false %}
-  <h2 id="categories">Categories</h2>
+  {% if site.disablecategories != true %}
+    <h2 id="categories">Categories</h2>
   {% endif %}
   <ul>
-  {% if site.disablecategories == true %}
-    {% for post in site.posts %}
-    <li>
-      {% if site.classicnews == true %}
-      <p>
-        <a href="{{ post.url }}">
-        <b>{{ post.title }} ({{ post.dateS }}). </b>
-        </a>
-        {{ post.excerpt | strip_html }}
-      </p>
-      {% else %}
-      <a href="{{ post.url }}">
-        <b>{{ post.title }} ({{ post.dateS }}). </b>
-      </a>
-      {{ post.excerpt }}
-      {% endif %}
-    </li>
-    {% endfor %}
-  {% else %}
-    {% for category in site.categories %}
-    {% capture category_name %}{{category | first}}{% endcapture %}
-    <li>
-      <p>
-      <a href="#{{category_name | slugize}}">{{category_name}}</a>
-      </p>
-    </li>
-    {% endfor %}
-  {% endif %}
+    {% if site.disablecategories == true %}
+      {% for post in site.posts %}
+        <li>
+          {% if site.classicnews == true %}
+            <p>
+              <a href="{{ post.url }}">
+                <b>{{ post.title }} ({{ post.dateS }}). </b>
+              </a>
+              {{ post.excerpt | strip_html }}
+            </p>
+          {% else %}
+            <a href="{{ post.url }}">
+              <b>{{ post.title }} ({{ post.dateS }}). </b>
+            </a>
+            {{ post.excerpt }}
+          {% endif %}
+        </li>
+      {% endfor %}
+    {% else %}
+      {% for category in site.categories %}
+      <li>
+        <a href="#{{category[0] | slugize}}">{{category[0]}}</a>
+      </li>
+      {% endfor %}
+    {% endif %}
   </ul>
   
-  {% if site.disablecategories == false %}
-  {% for category in site.categories %}
-  <p id="{{category_name | slugize}}" class="category_name">{{category_name}}</p>
-  <ul>
-    {% capture category_name %}{{ category | first }}{% endcapture %}
-    {% for post in site.categories[category_name] %}
-    <li>
-      {% if site.classicnews == true %}
-        <p>
-        <a href="{{ post.url }}">
-        <b>{{ post.title }} ({{ post.dateS }}). </b>
-        </a>
-        {{ post.excerpt | strip_html }}
-        </p>
-      {% else %}
-        <a href="{{ post.url }}">
-        <b>{{ post.title }} ({{ post.dateS }}). </b>
-        </a>
-        {{ post.excerpt }}
-      {% endif %}
-    </li>
-    {% endfor %}
-  </ul>
-  {% endfor %}
+  {% if site.disablecategories != true %}
+    {% for category in site.categories %}
+      <p id="{{ category[0] | slugify }}" class="category_name">{{category[0]}}</p>
+      <ul>
+        {% for post in category[1] %}
+          <h1>{{ post.content | remove_first:post.excerpt | remove_first:post.excerpt_separator }}</h1>
+          <li>
+            {% if site.classicnews == true %}
+              <p>
+                {% if post.content | remove_first:post.excerpt | remove_first:post.excerpt_separator != "" %}
+                  <a href="{{ post.url }}">
+                    <b>{{ post.title }} ({{ post.dateS }}). </b>
+                  </a>
+                  {{ post.excerpt | strip_html }}
+                {% else %}
+                  <b>{{ post.title }} ({{ post.dateS }}). </b>
+                  {{ post.excerpt | strip_html }}
+                {% endif %}
+              </p>
+            {% else %}
+              {% if post.content | remove_first:post.excerpt | remove_first:post.excerpt_separator != "" %}
+                <a href="{{ post.url }}">
+                  <b>{{ post.title }} ({{ post.dateS }}). </b>
+                </a>
+                {{ post.excerpt }}
+              {% else %}
+                <b>{{ post.title }} ({{ post.dateS }}). </b>
+                {{ post.excerpt }}
+              {% endif %}
+            {% endif %}
+          </li>
+        {% endfor %}
+      </ul>
+    {% endfor %} 
   {% endif %}
 </div>
