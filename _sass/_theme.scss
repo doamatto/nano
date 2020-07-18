@@ -188,11 +188,18 @@ footer {
   width: 50vw;
   @media(max-width: 1000px) { width: 90vw; }
   margin: 1em auto;
-  img {
-    @media(max-width: 500px) { max-width: 300px; }
-    @media(max-width: 1000px) { max-width: 80vw; }
-    max-width: 50vw;
-    width: 100%;
+
+  p {
+    img {
+      @media(max-width: 1000px) { max-width: 80vw; }
+      max-width: 50vw;
+
+      @if cimagecheck() == true {
+        width: 100%;
+      } @else {
+        width: 50%;
+      }
+    }
   }
   ul, ol {
     margin-left: 2em;
