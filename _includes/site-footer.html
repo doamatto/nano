@@ -3,11 +3,11 @@
     <p>
         &copy; {% if copyrightYear %}{{copyrightYear}}{% else %}{{ site.time | date: '%Y' }}{% endif %} {{ site.copyrightName }}.
         <br>{% if site.webSource %}
-        <a href="{{site.webSource}}">Contribute to this site.</a><br>{% endif %}{% for item in site.footerLinks %}
+        <a href="{{ site.webSource }}">Contribute to this site.</a><br>{% endif %}{% for item in site.footerLinks %}
         {% if item.url contains '://' %}
           {% assign url = item.url %}
         {% else %}
           {% assign url = item.url | relative_url %}
-        {% endif %}<a href="{{url}}">{{item.title}}</a>{% endfor %}
+        {% endif %}<a href="{{ url }}">{{ item.title }}</a>{% endfor %}
     </p>
 </footer>
