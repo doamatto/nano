@@ -1,0 +1,9 @@
+This is a list, in alphabetical order, of the site's sitemap. This list omits blog posts. You can view the sitemap with blog posts <a href="{{ '/sitemap.xml' | relative_url }}">here</a>.
+
+{% if site.disablesitemap == false %}
+{% for p in site.pages %}
+{% if p.index == true %}
+<li><a href="{{ p.url }}">{{ p.title }}</a></li>
+{% endif %}
+{% endfor %}
+{% endif %}
