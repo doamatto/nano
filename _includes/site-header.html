@@ -1,7 +1,7 @@
 <header>{% if site.logo %}
   <h1 class="logo">
       <a href="{{ '/' | relative_url }}">
-        <img src="{{site.logo}}" width="64px" alt="Home">
+        <img src="{{ site.logo | relative_url }}" width="64px" alt="Home">
       </a>
   </h1>{% endif %}
   <nav>
