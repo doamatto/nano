@@ -1,6 +1,7 @@
 ---
 layout: page
 title: About Nano
+index: true
 ---
 
 # {{page.title}}
