@@ -11,6 +11,7 @@ url: "https://doamatto.xyz/nano"
 
 disablesitemap: false # Disable sitemap; see wiki
 disablecategories: false # Disable categories in newsroom
+classicimages: true # DO NOT CHANGE WITHOUT READING THIS: https://github.com/doamatto/nano/wiki/Images
 classicnews: false # Bring back the pre-v0.3 newsroom look
 unsafecontent: false # DO NOT CHANGE WITHOUT READING THIS: https://github.com/doamatto/nano/wiki/Content-Security-Policy
 
