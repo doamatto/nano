@@ -345,3 +345,12 @@ dd { margin: .25em 1em; }
   }
   font-size: .95em;
 }
+
+// Blockquotes
+blockquote {
+  background: $LIGHTcodebgColour;
+  color: $LIGHTcodeColour;
+  padding: .25vh .5vh .25vh 1vh;
+  margin-bottom: 1em;
+  border-left: 4px solid $accentColour;
+}
