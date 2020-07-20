@@ -4,7 +4,7 @@ title: Home
 index: true
 ---
 
-Nano is a super lightweight Jekyll theme built to work great on all platforms, respect user privacy, and load at lightning-fast speeds. Explore the website to see more on how to install!
+Nano is a super lightweight Jekyll theme built to work great on all platforms, respect user privacy, and load at lightning-fast speeds. [Go to GitHub](https://github.com/doamatto/nano) for installation and other related documentation.
 
 ## Changelog
 <ul>
