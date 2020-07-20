@@ -48,10 +48,12 @@ ol, ul { margin: 1em 1em; }
   margin-left: 0 !important;
 }
 
-a { color: $LIGHTlinkColour; }
+a {
+  color: $LIGHTlinkColour;
+  transition: color 250ms ease-in-out;
+}
 a:hover {
   color: $LIGHTlinkHoverColour;
-  transition: color 250ms ease-in-out;
 }
 ul a, ol a { text-decoration: none; }
 
