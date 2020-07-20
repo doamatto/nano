@@ -15,3 +15,5 @@ Many thanks to the Jekyll and RubyGems community for great documentation, allowi
 Big thanks to the StackOverflow community; they helped me find some nice CSS workarounds for some things (like missing images). I quoted the posts I used when I used them.
 
 Special thanks to [Rishi](https://github.com/rveerepalli) for staying up late on the day before the launch of v0.3 to help fix some issues.
+
+Big thanks to [Dave Yarwood](https://github.com/daveyarwood) for doing up a [port of Gruvbox for Pygments/Rogue](https://github.com/daveyarwood/gruvbox-pygments), which is used for syntax highlighting.
