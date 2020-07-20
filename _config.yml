@@ -9,10 +9,11 @@ logo: "/assets/logo.svg"
 favicon: "/assets/logo.svg"
 url: "https://doamatto.xyz/nano"
 
-disablesitemap: false # Disable sitemap; see wiki
-disablecategories: false # Disable categories in newsroom
+blm-banner: true # Enables a BLM banner that links to the Equal Justice Initiative's donation page
 classicimages: true # DO NOT CHANGE WITHOUT READING THIS: https://github.com/doamatto/nano/wiki/Images
 classicnews: false # Bring back the pre-v0.3 newsroom look
+disablecategories: false # Disable categories in newsroom
+disablesitemap: false # Disable sitemap; see wiki
 unsafecontent: false # DO NOT CHANGE WITHOUT READING THIS: https://github.com/doamatto/nano/wiki/Content-Security-Policy
 
 # Import fonts to use on your site: https://github.com/doamatto/nano/wiki/Importing-Fonts
