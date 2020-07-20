@@ -37,4 +37,8 @@ $font-var: 'Inter', sans-serif; // Might break if nothing is here
 $font-regular: 400;
 $font-bold: 700;
 
+// New Image System in v0.4.1. You can revert using this config.
+// Don't change without reading: https://github.com/doamatto/nano/wiki/Images
+$classicimages: false;
+
 // Font imports were moved to ../_config.yml
