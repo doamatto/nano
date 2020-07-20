@@ -251,7 +251,7 @@ img {
 
 // Auto Dark Theme as Declared by Browser/OS
 @media (prefers-color-scheme: dark) {
-  .highlight {
+  .highlight, blockquote {
     background: $DARKcodebgColour;
     color: $DARKcodeColour;
   }
@@ -260,10 +260,6 @@ img {
     color: $DARKtextColour;
   }
   img { border: $borderSize $borderType $DARKborderColour; }
-  .highlight {
-    background: $DARKcodebgColour;
-    color: $DARKcodeColour;
-  }
 }
 
 // Make pixel trackers invisible
