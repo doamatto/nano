@@ -16,7 +16,7 @@ layout: default
     <br>
     {% if site.disablecategories == false %}
       <h3>
-        Tags: {{page.categories}}. <a href="{{ '/atom.xml' | relative_url }}">Subscribe to the Atom feed.</a>
+        Tags: {{ page.categories | array_to_sentence_string }}. <a href="{{ '/atom.xml' | relative_url }}">Subscribe to the Atom feed.</a>
       </h3>
     {% else %}
       <h3>
