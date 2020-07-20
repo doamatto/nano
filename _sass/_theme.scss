@@ -59,7 +59,7 @@ a:hover {
 ul a, ol a { text-decoration: none; }
 
 // Code blocks
-.highlight, code {
+.highlight, code, .highlighter-rogue {
   @supports (font-variation-settings: normal) { font-family: $codeFont-var; }
   font-family: $codeFont;
   background: $LIGHTcodebgColour;
@@ -353,8 +353,14 @@ dd { margin: .25em 1em; }
 blockquote {
   background: $LIGHTcodebgColour;
   color: $LIGHTcodeColour;
-  padding: .25vh .5vh .25vh 1vh;
+  margin-top: .5em;
+  padding: 1vh 1vh;
   margin-bottom: 1em;
   border-left: 4px solid $accentColour;
   h1, h2, h3, h4, h5, h6 { padding: 1.5vh .5vh .25vh 1vh; }
+  .highlighter-rouge {
+    border-left: 4px solid $accentColour;
+    margin-bottom: 1em;
+  }
+  blockquote, .highlighter-rouge { margin-left: 1vw; }
 }
