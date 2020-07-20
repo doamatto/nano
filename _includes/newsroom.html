@@ -25,7 +25,7 @@
     {% else %}
       {% for category in site.categories %}
       <li>
-        <a href="#{{category[0] | slugize}}">{{category[0]}}</a>
+        <a href="#{{category[0] | slugify }}">{{category[0]}}</a>
       </li>
       {% endfor %}
     {% endif %}
