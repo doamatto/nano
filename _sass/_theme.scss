@@ -70,6 +70,10 @@ em {
   @supports (font-variation-settings: normal) { font-variation-settings: "slnt" 10deg; }
   font-style: italic;
 }
+strong {
+  @supports (font-variation-settings: normal) { font-variation-settings: "wght" 700; }
+  font-style: bold;
+}
 
 // Code blocks
 .highlight, code, .highlighter-rogue {
