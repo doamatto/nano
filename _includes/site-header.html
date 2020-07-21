@@ -1,6 +1,6 @@
 <header>{% if site.logo %}
   <h1 class="logo">
-      <a href="{{ '/' | relative_url }}">
+      <a href="{{ '/' | relative_url }}" title="Home">
         <img src="{{ site.logo | relative_url }}" width="64px" alt="Home">
       </a>
   </h1>{% endif %}
@@ -10,8 +10,9 @@
           {% assign url = item.url %}
         {% else %}
           {% assign url = item.url | relative_url %}
-        {% endif %}<li>
-          <a href="{{url}}">{{item.title}}</a>
+        {% endif %}
+        <li>
+          <a href="{{url}}" title="{{item.title}}">{{item.title}}</a>
         </li>{% endfor %}
     </ul>
   </nav>
