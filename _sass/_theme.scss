@@ -7,6 +7,7 @@
 body {
   @supports (font-variation-settings: normal) {
     font-family: $font-var;
+    font-weight: $font-regular;
   }
   background: $LIGHTbgColour;
   color: $LIGHTtextColour;
