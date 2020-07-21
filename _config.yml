@@ -23,6 +23,7 @@ font-import:
   - "https://cdn.doamatto.xyz/ibm.min.css"
 
 # Setup site verifications: https://github.com/doamatto/nano/wiki/Site-Verifications
+ahrefsverify: ""
 alexaverify: ""
 bingverify: ""
 dailyverify: ""
