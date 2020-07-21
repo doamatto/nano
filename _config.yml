@@ -8,6 +8,8 @@ author: "doamatto"
 logo: "/assets/logo.svg"
 favicon: "/assets/logo.svg"
 url: "https://doamatto.xyz/nano"
+keywords: [ "nano for jekyll", "jekyll", "doamatto", "templates" ]
+twitter_creator: "@doamatto"
 
 blm-banner: true # Enables a BLM banner that links to the Equal Justice Initiative's donation page
 classicnews: false # Bring back the pre-v0.3 newsroom look
