@@ -25,7 +25,7 @@ body {
   h3 { font-size: 19px !important; }
   .post { h3 { font-size: 14px !important; } }
   h4, h5, h6 { font-size: 16px !important; }
-  .tagline, .tagline * { font-size: 60px !important; }
+  .tagline, .tagline * { font-size: 50px !important; }
   b { font-weight: $font-bold !important; } // Keeps bold bold, no matter the scenario
 }
 @media (max-width: 750px) { font-size: 72px; }
