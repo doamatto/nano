@@ -2,13 +2,16 @@
 * {
   margin: 0;
   padding: 0;
+  font-variation-settings: "slnt" 0deg;
 }
 
 body {
   @supports (font-variation-settings: normal) {
     font-family: $font-var;
     font-variation-settings: 'wght' $font-regular;
+    font-style: normal;
   }
+  font-style: normal;
   background: $LIGHTbgColour;
   color: $LIGHTtextColour;
   font-family: $font;
@@ -62,6 +65,11 @@ a:hover {
   color: $LIGHTlinkHoverColour;
 }
 ul a, ol a { text-decoration: none; }
+
+em {
+  @supports (font-variation-settings: normal) { font-variation-settings: "slnt" 10deg; }
+  font-style: italic;
+}
 
 // Code blocks
 .highlight, code, .highlighter-rogue {
