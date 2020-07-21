@@ -7,7 +7,7 @@
 body {
   @supports (font-variation-settings: normal) {
     font-family: $font-var;
-    font-weight: $font-regular;
+    font-variation-settings: 'wght' $font-bold;
   }
   background: $LIGHTbgColour;
   color: $LIGHTtextColour;
@@ -27,13 +27,17 @@ body {
   .post { h3 { font-size: 14px !important; } }
   h4, h5, h6 { font-size: 16px !important; }
   .tagline, .tagline * { font-size: 50px !important; }
-  b { font-weight: $font-bold !important; } // Keeps bold bold, no matter the scenario
+  b {
+    @supports (font-variation-settings: normal) { font-variation-settings: 'wght' $font-bold; }
+    font-weight: $font-bold !important;
+  } // Keeps bold bold, no matter the scenario
 }
 @media (max-width: 750px) { font-size: 72px; }
 
 p { margin: 1em 0; }
 h1 {
   font-size: 48px;
+  @supports (font-variation-settings: normal) { font-variation-settings: 'wght' $font-bold; }
   font-weight: $font-bold;
   line-height: 1.1;
 }
@@ -156,6 +160,7 @@ nav {
 
     font-size: 80px;
     letter-spacing: -.05em;
+    @supports (font-variation-settings: normal) { font-variation-settings: 'wght' $font-regular; }
     font-weight: $font-regular;
     line-height: 1.1;
     white-space: nowrap;
@@ -318,7 +323,10 @@ table {
 }
 
 // Definition lists
-dt { font-weight: $font-bold; }
+dt {
+  @supports (font-variation-settings: normal) { font-variation-settings: 'wght' $font-bold; }
+  font-weight: $font-bold;
+}
 dd { margin: .25em 1em; }
 
 // Checklists
@@ -341,6 +349,7 @@ dd { margin: .25em 1em; }
   align-items: center;
   justify-content: center;
   color: #fff;
+  @supports (font-variation-settings: normal) { font-variation-settings: 'wght' $font-bold; }
   font-weight: $font-bold;
   text-decoration: none;
   @media(max-width: 500px) {
