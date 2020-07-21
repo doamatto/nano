@@ -12,14 +12,12 @@
 <meta property="og:locale" content="{{site.lang}}">
 <meta http-equiv="language" content="{{site.lang}}">
 {% endif %}
-
 {% if page.author != nil or != "" %}
 <meta name="author" content="{{page.author}}">
 <meta name="article:author" content="{{page.author}}">
 {% elsif site.author != nil or != "" %}
 <meta name="author" content="{{site.author}}">
 {% endif %}
-
 {% if page.excerpt != nil or != "" %}
 <meta name="description" content="{{ page.excerpt | strip_html | strip}}">
 
@@ -45,7 +43,6 @@
 <meta name="twitter:description" content="{{site.description}}">
 <meta name="twitter:card" content="summary">
 {% endif %}
-
 {% if page.social_image != nil or != "" %}
 <meta property="og:image" content="{{ page.social_image }}">
 
@@ -59,11 +56,9 @@
 
 <meta name="twitter:image" content="{{ site.logo }}">
 {% endif %}
-
 {% if site.twitter_creator != nil or != "" %}
 <meta name="twitter:creator" content="{{ site.twitter_creator }}">
 {% endif %}
-
 {% if page.keywords != nil or != "" %}
 <meta name="keywords" content="{{ page.keywords | array_to_sentence_string }}">
 {% elsif site.keyword != nil or != "" %}
