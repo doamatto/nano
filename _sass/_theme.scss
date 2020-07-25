@@ -76,7 +76,7 @@ strong {
 }
 
 // Code blocks
-.highlight, code, .highlighter-rogue {
+.highlight, code {
   @supports (font-variation-settings: normal) { font-family: $codeFont-var; }
   font-family: $codeFont;
   background: $LIGHTcodebgColour;
@@ -84,6 +84,7 @@ strong {
   padding: .5vh 1vh .5vh 1vh;
   overflow-x: auto;
 }
+.highlighter-rouge { margin: 1em auto; }
 code { padding: .25vh .5vh .25vh .5vh; }
 
 // Navigation
