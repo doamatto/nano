@@ -166,16 +166,23 @@ nav {
 
   p, b {
     flex: 0 0 auto;
-    margin: auto 16px;
     display: flex;
     justify-content: center;
 
     font-size: 80px;
     letter-spacing: -.05em;
-    @supports (font-variation-settings: normal) { font-variation-settings: 'wght' $font-regular, 'slnt' 0; }
-    font-weight: $font-regular;
     line-height: 1.1;
     white-space: nowrap;
+  }
+  p {
+    @supports (font-variation-settings: normal) { font-variation-settings: 'wght' $font-regular, 'slnt' 0; }
+    font-weight: $font-regular;
+    margin: auto 16px;
+  }
+  b {
+    margin-left: 10px;
+    @supports (font-variation-settings: normal) { font-variation-settings: 'wght' $font-bold, 'slnt' 0; }
+    font-weight: $font-bold;
   }
 }
 
