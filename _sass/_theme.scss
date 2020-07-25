@@ -82,6 +82,7 @@ strong {
   background: $LIGHTcodebgColour;
   color: $LIGHTcodeColour;
   padding: .5vh 1vh .5vh 1vh;
+  overflow-x: auto;
 }
 code { padding: .25vh .5vh .25vh .5vh; }
 
