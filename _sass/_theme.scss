@@ -29,7 +29,7 @@ body {
   h3 { font-size: 19px !important; }
   .post { h3 { font-size: 14px !important; } }
   h4, h5, h6 { font-size: 16px !important; }
-  .tagline, .tagline * { font-size: 50px !important; }
+  .tagline, .tagline * { font-size: 12vw !important; }
   b {
     @supports (font-variation-settings: normal) { font-variation-settings: 'wght' $font-bold, 'slnt' 0; }
     font-weight: $font-bold !important;
