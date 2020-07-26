@@ -7,6 +7,7 @@ description: "Nano is a lightweight Jekyll theme built to work great on all plat
 author: "doamatto"
 logo: "/assets/logo.svg"
 favicon: "/assets/logo.svg"
+social_image: "/assets/logo.svg"
 url: "https://doamatto.xyz/nano"
 keywords: [ "nano for jekyll", "jekyll", "doamatto", "templates" ]
 twitter_creator: "@doamatto"
