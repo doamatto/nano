@@ -222,6 +222,7 @@ footer {
   margin: 1em auto;
 
   p {
+    line-height: 1.2;
     img {
       @if $classicimages {
         @media(max-width: 1000px) { max-width: 80vw; }
