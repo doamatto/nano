@@ -228,7 +228,6 @@ footer {
         @media(max-width: 1000px) { max-width: 60vw; }
         @media(max-width: 500px) { max-width: 80vw; }
         max-width: 35vw;
-        & { text-align: center; }
       }
     }
   }
@@ -358,7 +357,10 @@ dd { margin: .25em 1em; }
 .task-list-item-checkbox { margin-right: .5em; }
 
 // Centreing for images (see Wiki for more info)
-.centre { text-align: center; }
+.centre, .center {
+  margin: 0 auto;
+  display: block;
+}
 
 // BLM banner
 .blm-banner {
