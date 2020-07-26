@@ -10,6 +10,7 @@ body {
     font-family: $font-var;
     font-variation-settings: 'wght' $font-regular;
     font-style: normal;
+    font-display: swap;
   }
   font-style: normal;
   background: $LIGHTbgColour;
@@ -79,6 +80,7 @@ strong {
 .highlight, code {
   @supports (font-variation-settings: normal) { font-family: $codeFont-var; }
   font-family: $codeFont;
+  font-display: swap;
   background: $LIGHTcodebgColour;
   color: $LIGHTcodeColour;
   padding: .5vh 1vh .5vh 1vh;
