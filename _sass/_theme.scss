@@ -168,7 +168,7 @@ nav {
   padding: 1.5em 32px;
   max-height: 30vh;
 
-  p, b {
+  h1, b {
     flex: 0 0 auto;
     display: flex;
     justify-content: center;
@@ -178,7 +178,7 @@ nav {
     line-height: 1.1;
     white-space: nowrap;
   }
-  p {
+  h1 {
     @supports (font-variation-settings: normal) { font-variation-settings: 'wght' $font-regular, 'slnt' 0; }
     font-weight: $font-regular;
     margin: auto 16px;
