@@ -59,10 +59,14 @@ ol, ul { margin: 1em 1em; }
 
 a {
   color: $LIGHTlinkColour;
-  transition: color 250ms ease-in-out;
-}
-a:hover {
-  color: $LIGHTlinkHoverColour;
+  transition: all 250ms ease-in-out;
+  &:hover {
+    color: $LIGHTlinkHoverColour;
+    text-decoration: underline;
+    @if $classiclinks {
+      text-decoration-color: $LIGHTlinkHoverColour;
+    }
+  }
 }
 ul a, ol a { text-decoration: none; }
 
@@ -243,7 +247,13 @@ footer {
     li {
       padding-top: .25em;
       padding-bottom: .25em;
-      a { text-decoration: underline; }
+      a {
+        text-decoration: underline;
+        transition: all 250ms ease-in-out;
+        @if $classiclinks {
+          text-decoration-color: $LIGHTlinkHoverColour;
+        }
+      }
       p, a {
         margin: 0;
         padding: 0;
@@ -253,8 +263,12 @@ footer {
   @media(prefers-color-scheme: dark) {
     a { color: $DARKlinkColour; }
     a:hover, ul a:hover, ol a:hover, p a:hover {
-      color: $DARKlinkHoverColour;
-      transition: all 250ms ease-in-out;
+      @if $classiclinks {
+        color: $DARKlinkHoverColour;
+      } @else {
+        text-decoration-color: $DARKlinkHoverColour;
+        color: $DARKlinkColour;
+      }
     }
   }
   .highlight, p, hr {
