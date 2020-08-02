@@ -249,10 +249,11 @@ footer {
       padding-bottom: .25em;
       a {
         text-decoration: underline;
-        transition: all 250ms ease-in-out;
-        @if $classiclinks {
-          text-decoration-color: $LIGHTlinkHoverColour;
+        text-decoration-color: $LIGHTlinkColour;
+        @media(prefers-color-scheme: dark) {
+          text-decoration-color: $DARKlinkColour;
         }
+        transition: all 250ms ease-in-out;
       }
       p, a {
         margin: 0;
@@ -261,13 +262,17 @@ footer {
     }
   }
   @media(prefers-color-scheme: dark) {
-    a { color: $DARKlinkColour; }
+    a {
+      color: $DARKlinkColour;
+      text-decoration-color: $DARKlinkColour;
+    }
     a:hover, ul a:hover, ol a:hover, p a:hover {
       @if $classiclinks {
         color: $DARKlinkHoverColour;
-      } @else {
         text-decoration-color: $DARKlinkHoverColour;
+      } @else {
         color: $DARKlinkColour;
+        text-decoration-color: $DARKlinkHoverColour;
       }
     }
   }
