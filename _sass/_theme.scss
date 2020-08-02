@@ -389,7 +389,7 @@ dd { margin: .25em 1em; }
   color: #fff;
   @supports (font-variation-settings: normal) { font-variation-settings: 'wght' $font-bold, 'slnt' 0; }
   font-weight: $font-bold;
-  text-decoration: none;
+  text-decoration: none !important;
   @media(max-width: 500px) {
     font-size: .9em;
     padding: .7em;
