@@ -1,21 +1,23 @@
-<!doctype html>{% if site.lang != "" %}
+<!doctype html>
+{% if site.lang != "" %}
 <html lang="{{site.lang}}">
 {% else %}
 <html>
-{% endif %}<head>
+{% endif %}
+<head>
     <meta charset="UTF-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="referrer" content="no-referrer, same-origin">
+    <link rel="stylesheet" href="{{ '/assets/main.css' | relative_url }}">
     {% for item in site.font-import %}
     <link rel="stylesheet" href="{{item}}" async>
     {% endfor %}
-    <link rel="stylesheet" href="{{ '/assets/main.css' | relative_url }}">
     {% if site.favicon != "" %}
     <link rel="shortcut icon" href="{{ site.favicon }}">
-    <link rel="icon" href="{{site.favicon}}">
-    <link rel="apple-touch-icon" href="{{site.favicon}}">
+    <link rel="icon" href="{{ site.favicon }}">
+    <link rel="apple-touch-icon" href="{{ site.favicon }}">
     {% endif %}
+    <meta name="referrer" content="no-referrer, same-origin">
     {% include verifications.html %}
     {% include seo.html %}
     {% include csp.html %}
