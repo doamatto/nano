@@ -16,7 +16,7 @@
   {% endif %}
 {% endif %}
 
-{% if site.unsafecontent == false %}
+{% if site.unsafecontent == true %}
 <meta http-equiv="Content-Security-Policy" content="default-src 'self' https://*">
 {% else %}
 <meta http-equiv="Content-Security-Policy" content="script-src 'self'">
