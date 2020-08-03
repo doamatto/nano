@@ -51,7 +51,7 @@
 <meta property="og:image" content="{{ site.social_image }}">
 
 <meta name="twitter:image" content="{{ site.social_image }}">
-{% else %}
+{% else if site.logo != nil or != "" %}
 <meta property="og:image" content="{{ site.logo }}">
 
 <meta name="twitter:image" content="{{ site.logo }}">
