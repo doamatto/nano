@@ -1,0 +1,26 @@
+<div class="newsroom">
+  <h3><a href="{{ '/atom.xml' | relative_url }}">Subscribe to the Atom feed.</a></h3>
+  <ul>
+    {% for post in site.posts %}
+    <li>
+      {% if site.classicnews == true %}
+      <p>
+        <a href="{{ post.url }}">
+          <b>{{ post.title }} ({{ post.dateS }}). </b>
+        </a>
+        {{ post.excerpt | strip_html }}
+      </p>
+      {% else %}
+      <a href="{{ post.url }}">
+        <b>{{ post.title }} ({{ post.dateS }}). </b>
+      </a>
+      {{ post.excerpt }}
+      {% endif %}
+    </li>
+    {% endfor %}
+  </ul>
+</div>
+
+{% comment %}
+Basically the newsroom.html include but without categories altogether
+{% endcomment %}

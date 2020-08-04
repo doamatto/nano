@@ -1,0 +1,23 @@
+<ul>
+  {% for post in site.posts limit:15 %}
+    <li>
+      {% if site.classicnews == true %}
+        <p>
+          <a href="{{ post.url }}">
+            <b>{{ post.title }} ({{ post.dateS }}). </b>
+          </a>
+          {{ post.excerpt | strip_html }}
+        </p>
+      {% else %}
+        <a href="{{ post.url }}">
+          <b>{{ post.title }} ({{ post.dateS }}). </b>
+        </a>
+        {{ post.excerpt }}
+      {% endif %}
+    </li>
+  {% endfor %}
+</ul>
+
+{% comment %}
+Basically the news embed I use but made into an include
+{% endcomment %}
