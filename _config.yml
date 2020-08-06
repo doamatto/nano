@@ -10,6 +10,7 @@ favicon: "/assets/logo.svg"
 social_image: "/assets/logo.svg"
 url: "https://doamatto.xyz/nano"
 keywords: [ "nano for jekyll", "jekyll", "doamatto", "templates" ]
+webmonetize: "" # Find more info at https://webmonetization.org/
 twitter_creator: "@doamatto"
 
 blm-banner: true # Enables a BLM banner that links to the Equal Justice Initiative's donation page
